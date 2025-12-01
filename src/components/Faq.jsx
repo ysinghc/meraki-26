@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import faq from "../assets/Faq.png";
+import faq from "../assets/faq.png";
 import Box from "./Box";
 
 const questions = Array.from({ length: 12 }).map((_, i) => ({
