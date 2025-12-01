@@ -45,6 +45,9 @@ const Navbar = () => {
                     <Link to="/" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4">HOME</Link>
                     <Link to="/about" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4">ABOUT</Link>
                     <Link to="/" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4">EVENTS</Link>
+                    <Link to="/" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4">SPONSORS</Link>
+                    <Link to="/" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4">FAQ</Link>
+                    <Link to="/" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4">CONTACT US</Link>
                 </div>
                 <div className="text-white/90 font-terminal text-lg md:text-xl tracking-wide border-l-2 border-accent-500 pl-4 ml-4">
                     <Link to="https://iiitu.ac.in" target="_blank" rel="noopener noreferrer" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4">IIIT Una</Link>
