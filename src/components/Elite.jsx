@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import minecraftimg from "../assets/MinecraftDungeons_S2AdventurePass_1280x768.png";
-import chatgptbg from "../assets/ChatGPT Image Nov 29, 2025, 12_38_45 AM.png";
+import minecraftimg from "../assets/MinecraftDungeons_S2AdventurePass_1280x768.webp";
+import chatgptbg from "../assets/ChatGPT Image Nov 29, 2025, 12_38_45 AM.webp";
 
 const events = [
   {
@@ -35,7 +35,7 @@ function Elite() {
   const activeEvent = events.find((event) => event.id === activeTab);
 
   return (<>
-     <div className="relative w-full min-h-screen text-white m-t-[5px] pt-0 px-8 pb-8 overflow-hidden flex flex-col">
+    <div className="relative w-full min-h-screen text-white mt-[5px] pt-7 md:pt-12 px-8 pb-24 md:pb-32 overflow-hidden flex flex-col">
 
       {/* Background Image */}
       <div className="absolute inset-0 z-0">

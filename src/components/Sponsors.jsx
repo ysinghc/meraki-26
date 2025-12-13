@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import bgImage from '../assets/about_image3.png';
-import charArt from '../assets/sponsors_character_art.png';
+import bgImage from '../assets/about_image3.webp';
+import charArt from '../assets/sponsors_character_art.webp';
 
 
 const sponsorImages = [

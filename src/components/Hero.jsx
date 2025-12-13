@@ -4,8 +4,7 @@ import heroImage from '../assets/iiitu.webp';
 import Faq from './Faq';
 import Elite from './Elite';
 import Sponsors from './Sponsors';
-
-
+import Newgallery from './Newgallery';
 const Hero = () => {
     return (
         <section className="relative h-screen w-full overflow bg-black">
@@ -80,9 +79,10 @@ const Hero = () => {
                     </div>
                 </motion.div>
             </div>
-<Elite />
-<Sponsors />
-<Faq />
+            <Elite />
+            <Sponsors />
+            <Faq />
+            <Newgallery />
 
         </section>
     );
