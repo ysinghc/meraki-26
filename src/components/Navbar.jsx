@@ -19,14 +19,14 @@ const Navbar = () => {
             : "bg-gradient-to-b from-black/60 to-transparent";
 
     const handleNavigation = (sectionId) => {
-        
+
         if (window.location.pathname !== '/') {
             navigate(`/#${sectionId}`);
         } else {
-            
+
             scrollToSection(sectionId);
         }
-        
+
         if (isOpen) toggleMenu();
     };
 
@@ -56,11 +56,11 @@ const Navbar = () => {
                 Meraki
             </Link>
 
-            {}
+            { }
             <div className="hidden lg:flex items-center gap-6">
                 <div className="flex gap-6 font-pixel text-white/80 text-sm tracking-widest">
                     <Link to="/" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4 transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.6)]">HOME</Link>
-                    <Link to="/about" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4 transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.6)]">ABOUT</Link>
+                    <button onClick={() => handleNavigation('about')} className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4 transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.6)]">ABOUT</button>
                     <Link to="/schedule" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4 transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.6)]">SCHEDULE</Link>
                     <Link to="/gallery" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4 transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.6)]">GALLERY</Link>
                     <Link to="/team" className="hover:text-white cursor-pointer hover:underline decoration-accent-400 underline-offset-4 transition-all duration-300 hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.6)]">TEAM</Link>
@@ -72,14 +72,14 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {}
+            { }
             <div className="md:hidden z-50">
                 <button onClick={toggleMenu} className="text-white text-2xl focus:outline-none">
                     {isOpen ? <FaTimes /> : <FaBars />}
                 </button>
             </div>
 
-            {}
+            { }
             <div className="hidden md:flex lg:hidden z-50">
                 <button
                     onClick={toggleMenu}
@@ -89,7 +89,7 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {}
+            { }
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -104,7 +104,7 @@ const Navbar = () => {
                                 <Link to="/" onClick={toggleMenu} className="hover:text-accent-400 cursor-pointer transition-all duration-300 hover:scale-110 inline-block">HOME</Link>
                             </motion.div>
                             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }}>
-                                <Link to="/about" onClick={toggleMenu} className="hover:text-accent-400 cursor-pointer transition-all duration-300 hover:scale-110 inline-block">ABOUT</Link>
+                                <button onClick={() => handleNavigation('about')} className="hover:text-accent-400 cursor-pointer transition-all duration-300 hover:scale-110 inline-block">ABOUT</button>
                             </motion.div>
                             <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
                                 <Link to="/schedule" onClick={toggleMenu} className="hover:text-accent-400 cursor-pointer transition-all duration-300 hover:scale-110 inline-block">SCHEDULE</Link>

@@ -7,55 +7,36 @@ import { events } from "../constants";
 function Elite() {
   const [activeTab, setActiveTab] = useState(events[0].id);
   const navigate = useNavigate();
-
   const activeEvent = events.find((event) => event.id === activeTab);
 
   return (<>
-    <div id="events" className="relative w-full min-h-screen text-white m-t-[5px] pt-0 px-8 pb-8 overflow-hidden flex flex-col">
+    <div id="events" className="relative w-full min-h-screen text-white pt-24 px-8 pb-8 overflow-hidden flex flex-col">
 
-      { }
       <div className="absolute inset-0 z-0">
         <img src={eliteBg} alt="Background" className="w-full h-full object-cover" />
       </div>
 
-      { }
+      {/* Section Title */}
       <motion.div
-        className="relative z-10 y-0 w-full max-w-6xl mb-8 flex justify-start pt-12 pl-8 mt-8"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        className="relative z-10 w-full max-w-6xl mb-8 flex justify-start pl-0 mt-0"
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        { }
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 blur-md opacity-50"></div>
-          <div className="relative bg-black/80 border-4 border-purple-400 px-6 py-3"
-            style={{
-              boxShadow: '0 0 20px rgba(168,85,247,0.5), inset 0 0 10px rgba(168,85,247,0.2)',
-              borderImage: 'linear-gradient(135deg, #a855f7, #ec4899, #ef4444) 1'
-            }}
-          >
-            <h2
-              className="font-minecraft text-2xl md:text-4xl tracking-[3px] relative"
-              style={{
-                background: 'linear-gradient(180deg, #fae8ff 0%, #d946ef 50%, #a855f7 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                filter: 'drop-shadow(0 0 15px rgba(168,85,247,0.8)) drop-shadow(2px 2px 0px rgba(0,0,0,0.8))',
-              }}
-            >
-              ELITE EVENTS
-            </h2>
-          </div>
+        <div className="flex items-center gap-4">
+          <span className="text-cyan-400 text-2xl md:text-3xl">▶</span>
+          <h2 className="font-minecraft text-white text-2xl md:text-4xl tracking-widest uppercase">
+            ELITE EVENTS
+          </h2>
         </div>
       </motion.div>
 
-      { }
+      {/* Events Content */}
       <div className="flex-1 flex justify-center items-center w-full">
         <div className="relative z-10 flex flex-col-reverse md:flex-row w-full max-w-6xl gap-0 md:gap-0 overflow-visible">
 
-          { }
+          {/* Tab Buttons */}
           <div className="w-full md:w-1/3 flex flex-col overflow-visible z-10">
             {events.map((event, index) => (
               <motion.button
@@ -80,7 +61,6 @@ function Elite() {
                   }
   `}
               >
-
                 <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded flex items-center justify-center shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-110">
                   <img src={event.image} alt={event.title} className="w-full h-full object-cover opacity-80" />
                 </div>
@@ -91,7 +71,7 @@ function Elite() {
             ))}
           </div>
 
-          { }
+          {/* Event Details Panel */}
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 10 }}
@@ -103,7 +83,6 @@ flex flex-col gap-6 items-center
 h-auto md:h-[650px] lg:h-[750px] xl:h-[620px]"
           >
 
-            { }
             <div className="w-full h-full relative group rounded-lg aspect-video overflow-hidden">
               <motion.img
                 src={activeEvent.image}
@@ -116,7 +95,6 @@ h-auto md:h-[650px] lg:h-[750px] xl:h-[620px]"
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
             </div>
 
-            { }
             <div className="w-full flex flex-col lg:flex-row lg:items-center lg:justify-between h-full">
               <div className="lg:w-2/3">
                 <p className="font-minecraft text-gray-300 text-xsm leading-relaxed mb-6 lg:mb-0">

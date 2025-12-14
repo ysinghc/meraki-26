@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import bgImage from '../assets/sponsor_section_bg.webp';
 import charArt from '../assets/sponsors_character_art.webp';
@@ -42,17 +42,17 @@ const sponsorImages = [
     },
 ]
 
+// Base dimensions for responsive positioning
+const BaseWidth = 1311;
+const BaseHeight = 750;
+
 export default function Sponsors() {
-
-    const BaseWidth = 1311;
-    const BaseHeight = 750;
-
     const [smallDevice, setSmallDevice] = useState(false);
+
     useEffect(() => {
         function onResize() {
             const w = window.innerWidth;
-            if (w < 768) setSmallDevice(true);
-            else setSmallDevice(false);
+            setSmallDevice(w < 768);
         }
         onResize();
         window.addEventListener("resize", onResize);
@@ -62,7 +62,7 @@ export default function Sponsors() {
     return (
         <div
             id="sponsors"
-            className="w-full min-h-screen flex flex-col pb-12"
+            className="w-full min-h-screen flex flex-col pt-24 pb-12"
             style={{
                 backgroundImage: `url(${bgImage})`,
                 backgroundSize: 'cover',
@@ -70,40 +70,22 @@ export default function Sponsors() {
                 backgroundRepeat: 'no-repeat'
             }}>
 
-            <div className="flex items-center gap-3 ml-10 relative mt-8 pt-12">
+            <div className="flex items-center gap-3 ml-10 relative">
+                {/* Section Title */}
                 <motion.div
                     className="flex items-center gap-4"
-                    initial={{ opacity: 0, y: -20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    { }
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 blur-md opacity-50"></div>
-                        <div className="relative bg-black/80 border-4 border-yellow-400 px-6 py-3"
-                            style={{
-                                boxShadow: '0 0 20px rgba(234,179,8,0.5), inset 0 0 10px rgba(234,179,8,0.2)',
-                                borderImage: 'linear-gradient(135deg, #eab308, #f97316, #ef4444) 1'
-                            }}
-                        >
-                            <h2
-                                className="font-minecraft text-4xl tracking-[3px] relative"
-                                style={{
-                                    background: 'linear-gradient(180deg, #fef08a 0%, #fbbf24 50%, #f59e0b 100%)',
-                                    WebkitBackgroundClip: 'text',
-                                    WebkitTextFillColor: 'transparent',
-                                    backgroundClip: 'text',
-                                    filter: 'drop-shadow(0 0 15px rgba(234,179,8,0.8)) drop-shadow(2px 2px 0px rgba(0,0,0,0.8))',
-                                }}
-                            >
-                                SPONSORS
-                            </h2>
-                        </div>
-                    </div>
+                    <span className="text-cyan-400 text-2xl md:text-3xl">▶</span>
+                    <h2 className="font-minecraft text-white text-2xl md:text-4xl tracking-widest uppercase">
+                        SPONSORS
+                    </h2>
                 </motion.div>
 
-                { }
+                {/* Decorative Character */}
                 <motion.div
                     className="absolute hidden -top-25 right-10 sm:block sm:w-30 sm:h-40 md:w-60 md:h-80 z-10"
                     initial={{ opacity: 0, y: -20, rotate: -5 }}
@@ -114,16 +96,13 @@ export default function Sponsors() {
                         src={charArt}
                         alt="Minecraft Creeper"
                         className="w-full h-full object-contain"
-                        style={{
-                            filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.5))',
-                        }}
+                        style={{ filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.5))' }}
                     />
                 </motion.div>
-
             </div>
 
+            {/* Sponsor Logos Grid */}
             <div className="grid pt-[70px] place-items-center gap-10 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] md:flex md:flex-1 overflow-hidden md:relative">
-
                 {sponsorImages.map((item, idx) => (
                     <motion.div
                         key={idx}
@@ -157,10 +136,7 @@ export default function Sponsors() {
                             }} />
                     </motion.div>
                 ))}
-
             </div>
-
-        </div >
+        </div>
     );
 }
-
