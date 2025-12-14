@@ -9,42 +9,61 @@ const sponsorImages = [
         y: 56,
         url: `https://picsum.photos/seed/hi/200`,
         size: "200px",
-        name: "Director",
+        mobileSize: "140px",
+        name: "Sponsor 1",
         leftAnchored: true,
     }, {
         x: 563,
         y: 174,
         url: `https://picsum.photos/seed/hii/200`,
         size: "200px",
-        name: "Director",
+        mobileSize: "140px",
+        name: "Sponsor 2",
         leftAnchored: true,
     }, {
         x: 90,
         y: 401,
         url: `https://picsum.photos/seed/hiii/200`,
         size: "200px",
-        name: "Director",
+        mobileSize: "140px",
+        name: "Sponsor 3",
         leftAnchored: true,
     }, {
         x: 539,
         y: 500,
         url: `https://picsum.photos/seed/hiiii/200`,
         size: "200px",
-        name: "Director",
+        mobileSize: "140px",
+        name: "Sponsor 4",
         leftAnchored: false,
     }, {
         x: 120,
         y: 401,
         url: `https://picsum.photos/seed/hiiiii/200`,
         size: "200px",
-        name: "Director",
+        mobileSize: "140px",
+        name: "Sponsor 5",
         leftAnchored: false,
     },
-]
+];
 
 // Base dimensions for responsive positioning
 const BaseWidth = 1311;
 const BaseHeight = 750;
+
+// Animation variants
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.15, delayChildren: 0.2 }
+    }
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: 20 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+};
 
 export default function Sponsors() {
     const [smallDevice, setSmallDevice] = useState(false);
@@ -60,9 +79,9 @@ export default function Sponsors() {
     }, []);
 
     return (
-        <div
+        <section
             id="sponsors"
-            className="w-full min-h-screen flex flex-col pt-24 pb-12"
+            className="w-full min-h-screen flex flex-col pt-24 pb-12 px-4 sm:px-6 md:px-8"
             style={{
                 backgroundImage: `url(${bgImage})`,
                 backgroundSize: 'cover',
@@ -70,31 +89,32 @@ export default function Sponsors() {
                 backgroundRepeat: 'no-repeat'
             }}>
 
-            <div className="flex items-center gap-3 ml-10 relative">
+            <div className="flex items-center gap-3 ml-4 sm:ml-6 md:ml-10 relative">
                 {/* Section Title */}
                 <motion.div
-                    className="flex items-center gap-4"
-                    initial={{ opacity: 0, x: -20 }}
+                    className="flex items-center gap-3 md:gap-4"
+                    initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
                 >
-                    <span className="text-cyan-400 text-2xl md:text-3xl">▶</span>
-                    <h2 className="font-minecraft text-white text-2xl md:text-4xl tracking-widest uppercase">
+                    <span className="text-cyan-400 text-xl sm:text-2xl md:text-3xl">▶</span>
+                    <h2 className="font-minecraft text-white text-xl sm:text-2xl md:text-4xl tracking-widest uppercase">
                         SPONSORS
                     </h2>
                 </motion.div>
 
                 {/* Decorative Character */}
                 <motion.div
-                    className="absolute hidden -top-25 right-10 sm:block sm:w-30 sm:h-40 md:w-60 md:h-80 z-10"
-                    initial={{ opacity: 0, y: -20, rotate: -5 }}
-                    animate={{ opacity: 1, y: 0, rotate: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="absolute hidden sm:block -top-16 md:-top-20 right-4 sm:right-10 w-24 h-32 sm:w-32 sm:h-40 md:w-48 md:h-64 z-10"
+                    initial={{ opacity: 0, y: -30, rotate: -5 }}
+                    whileInView={{ opacity: 1, y: 0, rotate: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                 >
                     <img
                         src={charArt}
-                        alt="Minecraft Creeper"
+                        alt="Minecraft Character"
                         className="w-full h-full object-contain"
                         style={{ filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.5))' }}
                     />
@@ -102,41 +122,44 @@ export default function Sponsors() {
             </div>
 
             {/* Sponsor Logos Grid */}
-            <div className="grid pt-[70px] place-items-center gap-10 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] md:flex md:flex-1 overflow-hidden md:relative">
+            <motion.div
+                className="grid pt-12 md:pt-16 place-items-center gap-6 sm:gap-8 md:gap-10 grid-cols-2 sm:grid-cols-3 md:flex md:flex-1 overflow-hidden md:relative"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-50px" }}
+            >
                 {sponsorImages.map((item, idx) => (
                     <motion.div
                         key={idx}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: idx * 0.1 }}
+                        variants={itemVariants}
                         whileHover={{
                             scale: 1.1,
                             boxShadow: "0 0 25px rgba(6,182,212,0.6)",
                             transition: { duration: 0.2 }
                         }}
                         style={{
-                            width: item.size,
+                            width: smallDevice ? item.mobileSize : item.size,
+                            height: smallDevice ? item.mobileSize : item.size,
                             borderRadius: "50%",
                             overflow: "hidden",
                             backgroundColor: "#FFF",
-                            top: `${(item.y / BaseHeight) * 100}%`,
+                            top: smallDevice ? "auto" : `${(item.y / BaseHeight) * 100}%`,
                             position: smallDevice ? "static" : "absolute",
                             cursor: "pointer",
-                            ...(item.leftAnchored
+                            ...(smallDevice ? {} : (item.leftAnchored
                                 ? { left: `${(item.x / BaseWidth) * 100}%` }
-                                : { right: `${(item.x / BaseWidth) * 100}%` })
-                        }}>
-                        <img src={item.url}
+                                : { right: `${(item.x / BaseWidth) * 100}%` }))
+                        }}
+                    >
+                        <img
+                            src={item.url}
                             alt={item.name}
-                            style={{
-                                objectFit: "cover",
-                                width: "100%",
-                                height: "100%"
-                            }} />
+                            className="w-full h-full object-cover"
+                        />
                     </motion.div>
                 ))}
-            </div>
-        </div>
+            </motion.div>
+        </section>
     );
 }

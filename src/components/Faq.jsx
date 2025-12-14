@@ -9,6 +9,20 @@ const questions = Array.from({ length: 12 }).map((_, i) => ({
     a: "This is the detailed answer for the technical workshop. Replace with real content. It will open/close inside the box without disturbing other columns."
 }));
 
+// Animation variants
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.08, delayChildren: 0.1 }
+    }
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+};
+
 export default function Faq() {
     const [openIndex, setOpenIndex] = useState(null);
     const [cols, setCols] = useState(() => {
@@ -40,9 +54,9 @@ export default function Faq() {
     }, [cols]);
 
     return (
-        <div
+        <section
             id="faq"
-            className="w-full min-h-screen pt-24 pb-12"
+            className="w-full min-h-screen pt-24 pb-12 px-4 sm:px-6"
             style={{
                 backgroundImage: `url(${faq})`,
                 backgroundSize: 'cover',
@@ -52,40 +66,51 @@ export default function Faq() {
 
             {/* Section Title */}
             <motion.div
-                className="flex items-center gap-4 ml-10"
-                initial={{ opacity: 0, x: -20 }}
+                className="flex items-center gap-3 md:gap-4 ml-4 sm:ml-6 md:ml-10 mb-8 md:mb-12"
+                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
             >
-                <span className="text-cyan-400 text-2xl md:text-3xl">▶</span>
-                <h2 className="font-minecraft text-white text-2xl md:text-4xl tracking-widest uppercase">
+                <span className="text-cyan-400 text-xl sm:text-2xl md:text-3xl">▶</span>
+                <h2 className="font-minecraft text-white text-xl sm:text-2xl md:text-4xl tracking-widest uppercase">
                     FAQs
                 </h2>
             </motion.div>
 
             {/* FAQ Grid */}
-            <div className="flex items-start justify-center py-12">
-                <div className="w-full max-w-6xl px-6">
-                    <div className="flex gap-6">
+            <div className="flex items-start justify-center">
+                <div className="w-full max-w-6xl">
+                    <motion.div
+                        className="flex flex-col sm:flex-row gap-4 sm:gap-6"
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-50px" }}
+                    >
                         {columns.map((colItems, colIdx) => (
-                            <div key={colIdx} className="flex-1 flex flex-col gap-6">
+                            <motion.div
+                                key={colIdx}
+                                className="flex-1 flex flex-col gap-4 sm:gap-6"
+                                variants={containerVariants}
+                            >
                                 {colItems.map((item) => (
-                                    <Box
-                                        key={item.index}
-                                        question={item.q}
-                                        answer={item.a}
-                                        isOpen={openIndex === item.index}
-                                        onToggle={() =>
-                                            setOpenIndex((prev) => (prev === item.index ? null : item.index))
-                                        }
-                                    />
+                                    <motion.div key={item.index} variants={itemVariants}>
+                                        <Box
+                                            question={item.q}
+                                            answer={item.a}
+                                            isOpen={openIndex === item.index}
+                                            onToggle={() =>
+                                                setOpenIndex((prev) => (prev === item.index ? null : item.index))
+                                            }
+                                        />
+                                    </motion.div>
                                 ))}
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
