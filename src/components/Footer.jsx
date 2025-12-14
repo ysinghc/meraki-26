@@ -6,6 +6,43 @@ import merakiLogo from "../assets/meraki-minecraft.png";
 const Footer = () => {
   const blockSize = 25; // Base block size in pixels
 
+  /**
+   * HOW TO ADD COLORED SQUARES TO THE FOOTER BACKGROUND
+   * 
+   * The fixedSquares array allows you to place decorative colored blocks
+   * on the footer background. Each square object has the following properties:
+   * 
+   * @property {number} x - Horizontal position (0-40 scale, where 40 = 100% width)
+   *                        Example: x: 5 places the square at ~12.5% from the left
+   *                                 x: 20 places it at center (50%)
+   *                                 x: 35 places it at ~87.5% from the left
+   * 
+   * @property {number} y - Vertical position (in blocks from the top of the dark section)
+   *                        Each unit = 25px (blockSize). y: 0 is right at the 30% mark
+   *                        Example: y: 0 = at the transition line
+   *                                 y: 2 = 50px below the transition
+   *                                 y: 4 = 100px below the transition
+   * 
+   * @property {string} color - CSS color value for the square
+   *                            Example: "#C4A962" (gold)
+   *                                     "#FF0000" (red)
+   *                                     "rgba(255, 255, 255, 0.3)" (transparent white)
+   * 
+   * EXAMPLE USAGE:
+   * 
+   * const fixedSquares = [
+   *   { x: 5, y: 2, color: "#C4A962" },     // Gold square at left, 50px down
+   *   { x: 20, y: 4, color: "#FF5733" },    // Orange square at center, 100px down
+   *   { x: 35, y: 1, color: "#6C6A6A" },    // Gray square at right, 25px down
+   *   { x: 10, y: 6, color: "rgba(255, 255, 255, 0.2)" }, // Transparent white
+   * ];
+   * 
+   * TIPS:
+   * - Keep x values between 0-40 to stay within viewport
+   * - Use y values carefully to avoid overlapping with content
+   * - The blockSize is 25px, so each block is a 25x25 pixel square
+   * - Squares appear below the 30% gray section (in the dark #242424 area)
+   */
   const fixedSquares = [];
 
   const coordinators = [
@@ -36,7 +73,7 @@ const Footer = () => {
           className="absolute top-0 left-0 right-0"
           style={{
             height: "30%",
-            backgroundColor: "#6C6A6A",
+            backgroundColor: "#303030",
           }}
         />
         {/* Bottom */}
@@ -90,7 +127,7 @@ const Footer = () => {
                 transition={{ duration: 0.6, delay: idx * 0.2 }}
               >
                 <h3
-                  className="text-[#C4A962] text-sm sm:text-base md:text-lg mb-2"
+                  className="text-white text-sm sm:text-base md:text-lg mb-2"
                   style={{
                     fontFamily: "'VT323', monospace",
                     fontSize: "clamp(28px, 5vw, 32px)",
@@ -99,7 +136,7 @@ const Footer = () => {
                   {coordinator.name}
                 </h3>
                 <p
-                  className="text-gray-800 text-[8px] sm:text-[10px] md:text-xs mb-1"
+                  className="text-white text-[8px] sm:text-[10px] md:text-xs mb-1"
                   style={{
                     fontFamily: "'VT323', monospace",
                     fontSize: "clamp(20px, 3vw, 18px)",
@@ -108,7 +145,7 @@ const Footer = () => {
                   {coordinator.email}
                 </p>
                 <p
-                  className="text-gray-800 text-[8px] sm:text-[10px] md:text-xs mb-1"
+                  className="text-white text-[8px] sm:text-[10px] md:text-xs mb-1"
                   style={{
                     fontFamily: "'VT323', monospace",
                     fontSize: "clamp(20px, 3vw, 18px)",
