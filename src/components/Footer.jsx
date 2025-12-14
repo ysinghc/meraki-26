@@ -58,7 +58,10 @@ const Footer = () => {
     },
   ];
 
-  const otherFests = ["MRIDANG", "ESUMMIT"];
+  const otherFests = [
+    { name: "MRIDANG", url: "https://mridang.iiitu.ac.in" },
+    { name: "ESUMMIT", url: "https://esummit.iiitu.ac.in" },
+  ];
   const quickLinks = ["HOW TO REACH", "COORDINATING TEAM"];
 
   return (
@@ -234,14 +237,16 @@ const Footer = () => {
               {otherFests.map((fest, idx) => (
                 <li key={idx}>
                   <a
-                    href="#"
+                    href={fest.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-400 text-[8px] sm:text-[10px] hover:text-[#C4A962] transition-colors duration-300"
                     style={{
                       fontFamily: "'VT323', monospace",
                       fontSize: "clamp(11px, 2vw, 14px)",
                     }}
                   >
-                    {fest}
+                    {fest.name}
                   </a>
                 </li>
               ))}
