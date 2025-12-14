@@ -34,8 +34,8 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className={`fixed top-0 left-0 w-full z-50 py-6 px-8 flex justify-between items-center transition-colors duration-150
-                ${navBackground}`}
+            className={`fixed top-0 left-0 w-full z-50 py-4 px-4 sm:py-5 sm:px-6 lg:py-6 lg:px-8 flex justify-between items-centertransition-colors duration-150
+        ${navBackground}`}
         >
             <Link to="/" className="text-white font-minecraft text-xl md:text-2xl tracking-wider flex items-center gap-3 hover:text-accent-400 transition-colors duration-300 cursor-pointer">
                 <span className="text-accent-400 text-sm animate-pulse">►</span>

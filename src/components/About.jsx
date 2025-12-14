@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import aboutImage from '../assets/about_image3.png';
-import aboutImage1 from '../assets/about_image1.png';
-import aboutImage2 from '../assets/about_image2.png';
+import aboutImage from '../assets/about_image3.webp';
+import aboutImage1 from '../assets/about_image1.webp';
+import aboutImage2 from '../assets/about_image2.webp';
 import { ABOUT_IIIT_UNA, ABOUT_MERAKI } from '../constants';
 
 const About = () => {

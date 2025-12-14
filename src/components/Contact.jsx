@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
-import steveRun from "../assets/about_image2.png";
-import addonImage from "../assets/spn.png";
-import pageBackground from "../assets/contact.png";
+import steveRun from "../assets/about_image2.webp";
+import addonImage from "../assets/spn.webp";
+import pageBackground from "../assets/contact.webp";
 import avatarPixel from "../assets/iiitu.webp";
-import motionimg from "../assets/collab.png";
+import motionimg from "../assets/collab.webp";
 
 export default function ContactMinecraft() {
   const containerRef = useRef(null);
