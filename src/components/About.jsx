@@ -13,8 +13,8 @@ const About = () => {
                 className="absolute inset-0 z-0 w-full h-full"
                 style={{
                     backgroundImage: `url(${aboutImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
+                    backgroundSize: '100% auto',
+                    backgroundPosition: 'top center',
                     backgroundRepeat: 'no-repeat'
                 }}
             />

@@ -84,8 +84,8 @@ export default function Sponsors() {
             className="w-full min-h-screen flex flex-col pt-24 pb-12 px-4 sm:px-6 md:px-8"
             style={{
                 backgroundImage: `url(${bgImage})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundSize: '100% auto',
+                backgroundPosition: 'top center',
                 backgroundRepeat: 'no-repeat'
             }}>
 

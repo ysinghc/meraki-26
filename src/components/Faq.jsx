@@ -59,8 +59,8 @@ export default function Faq() {
             className="w-full min-h-screen pt-24 pb-12 px-4 sm:px-6"
             style={{
                 backgroundImage: `url(${faq})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundSize: '100% auto',
+                backgroundPosition: 'top center',
                 backgroundRepeat: 'no-repeat'
             }}>
 

@@ -28,7 +28,11 @@ function Elite() {
 
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <img src={eliteBg} alt="Background" className="w-full h-full object-cover" />
+        <img
+          src={eliteBg}
+          alt="Background"
+          className="w-full h-auto min-h-full object-cover object-top"
+        />
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
