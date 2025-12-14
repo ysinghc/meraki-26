@@ -2,9 +2,9 @@
 import minecraftImg from '../assets/MinecraftDungeons_S2AdventurePass_1280x768.webp';
 import aboutImg1 from '../assets/about_image1.webp';
 import aboutImg2 from '../assets/about_image2.webp';
-import aboutImg3 from '../assets/about_image3.webp';
-import faqImg from '../assets/faq.webp';
-import contactImg from '../assets/contact.webp';
+import aboutImg3 from '../assets/about_section_bg.webp';
+import faqImg from '../assets/faq_section_bg.webp';
+import contactImg from '../assets/gallery.webp';
 
 export const galleryCollections = [
     {

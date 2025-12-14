@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import faq from "../assets/faq.webp";
+import faq from "../assets/faq_section_bg.webp";
 import Box from "./Box";
 
 const questions = Array.from({ length: 12 }).map((_, i) => ({
@@ -58,7 +58,7 @@ export default function Faq() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
-                {}
+                { }
                 <div className="relative">
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 blur-md opacity-50"></div>
                     <div className="relative bg-black/80 border-4 border-cyan-400 px-6 py-3"

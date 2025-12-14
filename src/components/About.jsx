@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import aboutImage from '../assets/about_image3.webp';
+import aboutImage from '../assets/about_section_bg.webp';
 import aboutImage1 from '../assets/about_image1.webp';
 import aboutImage2 from '../assets/about_image2.webp';
 import { ABOUT_IIIT_UNA, ABOUT_MERAKI } from '../constants/AboutData';
@@ -8,7 +8,7 @@ import { ABOUT_IIIT_UNA, ABOUT_MERAKI } from '../constants/AboutData';
 const About = () => {
     return (
         <section className="relative w-full overflow-x-hidden bg-black">
-            {}
+            { }
             <div
                 className="absolute inset-0 z-0 w-full h-full bg-center"
                 style={{
@@ -26,10 +26,10 @@ const About = () => {
                 `}</style>
             </div>
 
-            {}
+            { }
             <div className="relative mt-4 z-10 pt-28 md:pt-20 pb-16 px-4 md:px-8 lg:px-12 flex items-center">
 
-                {}
+                { }
                 <div className="flex flex-col lg:flex-row gap-16 md:gap-20 lg:gap-8 max-w-7xl mx-auto w-full" style={{ height: 'auto', minHeight: 'calc((100vh - 8rem) * 0.8)' }}>
                     <style>{`
                         @media (min-width: 1024px) {
@@ -39,7 +39,7 @@ const About = () => {
                         }
                     `}</style>
 
-                    {}
+                    { }
                     <motion.div
                         className="about-container flex-1 bg-black/80 backdrop-blur-sm border-4 border-gray-600 shadow-2xl p-6 md:p-8 relative h-auto flex flex-col justify-start"
                         initial={{ opacity: 0, y: 30 }}
@@ -50,7 +50,7 @@ const About = () => {
                             paddingTop: '40px'
                         }}
                     >
-                        {}
+                        { }
                         <div className="absolute -top-11 -left-4 md:-top-22 md:-left-6 w-24 h-32 md:w-32 md:h-40 z-10">
                             <img
                                 src={aboutImage1}
@@ -89,7 +89,7 @@ const About = () => {
                         </div>
                     </motion.div>
 
-                    {}
+                    { }
                     <motion.div
                         className="about-container flex-1 bg-black/80 backdrop-blur-sm border-4 border-gray-600 shadow-2xl p-6 md:p-8 relative h-auto flex flex-col justify-start"
                         initial={{ opacity: 0, y: 30 }}
@@ -100,7 +100,7 @@ const About = () => {
                             paddingTop: '40px'
                         }}
                     >
-                        {}
+                        { }
                         <div className="absolute -top-12 -right-4 md:-top-16 md:-right-6 w-24 h-32 md:w-32 md:h-40 z-10">
                             <img
                                 src={aboutImage2}

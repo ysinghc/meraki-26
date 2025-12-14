@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import galleryBg from '../assets/ChatGPT Image Nov 29, 2025, 12_38_45 AM.webp';
+import galleryBg from '../assets/gallery.webp';
 import { galleryCollections } from '../constants';
 
 const Gallery = () => {

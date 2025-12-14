@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import bgImage from '../assets/about_image3.webp';
+import bgImage from '../assets/sponsor_section_bg.webp';
 import charArt from '../assets/sponsors_character_art.webp';
 
 const sponsorImages = [
@@ -43,7 +43,7 @@ const sponsorImages = [
 ]
 
 export default function Sponsors() {
-    
+
     const BaseWidth = 1311;
     const BaseHeight = 750;
 
@@ -54,7 +54,7 @@ export default function Sponsors() {
             if (w < 768) setSmallDevice(true);
             else setSmallDevice(false);
         }
-        onResize(); 
+        onResize();
         window.addEventListener("resize", onResize);
         return () => window.removeEventListener("resize", onResize);
     }, []);
@@ -78,7 +78,7 @@ export default function Sponsors() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    {}
+                    { }
                     <div className="relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 blur-md opacity-50"></div>
                         <div className="relative bg-black/80 border-4 border-yellow-400 px-6 py-3"
@@ -103,7 +103,7 @@ export default function Sponsors() {
                     </div>
                 </motion.div>
 
-                {}
+                { }
                 <motion.div
                     className="absolute hidden -top-25 right-10 sm:block sm:w-30 sm:h-40 md:w-60 md:h-80 z-10"
                     initial={{ opacity: 0, y: -20, rotate: -5 }}

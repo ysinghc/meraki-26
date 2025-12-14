@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import heroImage from '../assets/iiitu.webp';
+import About from './About';
 import Faq from './Faq';
 import Elite from './Elite';
 import Sponsors from './Sponsors';
@@ -10,7 +11,7 @@ const Hero = () => {
     return (
         <>
             <section className="relative h-screen w-full overflow bg-black">
-                {}
+                { }
                 <motion.div
                     className="absolute inset-0 z-0"
                     initial={{ opacity: 0 }}
@@ -28,10 +29,10 @@ const Hero = () => {
                     <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
                 </motion.div>
 
-                {}
+                { }
                 <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
 
-                    {}
+                    { }
                     <motion.h1
                         className="text-4xl md:text-6xl lg:text-8xl font-minecraft text-white mb-8 leading-tight"
                         initial={{ opacity: 0, y: 40 }}
@@ -41,7 +42,7 @@ const Hero = () => {
                         Meraki
                     </motion.h1>
 
-                    {}
+                    { }
                     <motion.p
                         className="text-3xl md:text-5xl font-terminal text-accent-300 tracking-[0.2em] uppercase mb-16"
                         initial={{ opacity: 0, y: 20 }}
@@ -51,7 +52,7 @@ const Hero = () => {
                         Techfest 2026
                     </motion.p>
 
-                    {}
+                    { }
                     <motion.div
                         className="mb-24"
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -66,7 +67,7 @@ const Hero = () => {
                         </button>
                     </motion.div>
 
-                    {}
+                    { }
                     <motion.div
                         className="absolute bottom-32 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
                         initial={{ opacity: 0, y: -10 }}
@@ -94,7 +95,7 @@ const Hero = () => {
                         </motion.div>
                     </motion.div>
 
-                    {}
+                    { }
                     <motion.div
                         className="absolute bottom-16 w-full flex flex-col md:flex-row justify-between items-center px-8 md:px-20 text-white/90 font-pixel text-lg md:text-2xl tracking-wide"
                         initial={{ opacity: 0 }}
@@ -113,6 +114,7 @@ const Hero = () => {
                     </motion.div>
                 </div>
             </section>
+            <About />
             <Elite />
             <Sponsors />
             <Faq />

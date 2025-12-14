@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 
 import steveRun from "../assets/about_image2.webp";
 import addonImage from "../assets/spn.webp";
-import pageBackground from "../assets/contact.webp";
+import pageBackground from "../assets/faq_section_bg.webp";
 import qrPlaceholder from "../assets/qr_placeholder.webp";
 import avatarPixel from "../assets/iiitu.webp";
 import motionimg from "../assets/collab.webp";
