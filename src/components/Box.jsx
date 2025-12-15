@@ -21,15 +21,15 @@ export default function Box({ question, answer, isOpen, onToggle }) {
           className="w-full bg-[#474747] transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]"
           style={{
             backfaceVisibility: "hidden",
-            border: '3px solid',
-            borderColor: '#888888 #1a1a1a #1a1a1a #666666',
+            border: "3px solid",
+            borderColor: "#888888 #1a1a1a #1a1a1a #666666",
           }}
         >
           <div
             className="bg-[#3a3a3a] p-5 md:p-6"
             style={{
-              border: '2px solid',
-              borderColor: '#2a2a2a #555555 #555555 #2a2a2a'
+              border: "2px solid",
+              borderColor: "#2a2a2a #555555 #555555 #2a2a2a",
             }}
           >
             <p className="font-minecraft text-sm md:text-base text-white leading-relaxed tracking-wide">
@@ -44,16 +44,16 @@ export default function Box({ question, answer, isOpen, onToggle }) {
           style={{
             backfaceVisibility: "hidden",
             transform: "rotateY(180deg)",
-            border: '3px solid',
-            borderColor: '#22d3ee #0e4a4a #0e4a4a #06b6d4',
-            boxShadow: '0 0 20px rgba(6, 182, 212, 0.4)',
+            border: "3px solid",
+            borderColor: "#22d3ee #0e4a4a #0e4a4a #06b6d4",
+            boxShadow: "0 0 20px rgba(6, 182, 212, 0.4)",
           }}
         >
           <div
             className="bg-[#3a3a3a] p-5 md:p-6"
             style={{
-              border: '2px solid',
-              borderColor: '#2a2a2a #555555 #555555 #2a2a2a'
+              border: "2px solid",
+              borderColor: "#2a2a2a #555555 #555555 #2a2a2a",
             }}
           >
             <p className="font-terminal text-sm md:text-base text-gray-300 leading-relaxed">

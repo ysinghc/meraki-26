@@ -9,13 +9,13 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.1, delayChildren: 0.2 }
-  }
+    transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+  },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, x: -30 },
-  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  visible: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
 function Elite() {
@@ -24,8 +24,10 @@ function Elite() {
   const activeEvent = events.find((event) => event.id === activeTab);
 
   return (
-    <section id="events" className="relative w-full min-h-screen text-white pt-24 px-4 sm:px-6 md:px-8 pb-8 overflow-hidden flex flex-col">
-
+    <section
+      id="events"
+      className="relative w-full min-h-screen text-white pt-24 px-4 sm:px-6 md:px-8 pb-8 overflow-hidden flex flex-col"
+    >
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img
@@ -45,7 +47,9 @@ function Elite() {
         transition={{ duration: 0.6, ease: "easeOut" }}
       >
         <div className="flex items-center gap-3 md:gap-4">
-          <span className="text-cyan-400 text-xl sm:text-2xl md:text-3xl">▶</span>
+          <span className="text-cyan-400 text-xl sm:text-2xl md:text-3xl">
+            ▶
+          </span>
           <h2 className="font-minecraft text-white text-xl sm:text-2xl md:text-4xl tracking-widest uppercase">
             ELITE EVENTS
           </h2>
@@ -55,7 +59,6 @@ function Elite() {
       {/* Events Content */}
       <div className="flex-1 flex justify-center items-center w-full">
         <div className="relative z-10 flex flex-col md:flex-row w-full max-w-6xl mx-auto gap-4 md:gap-0 overflow-visible">
-
           {/* Tab Buttons */}
           <motion.div
             className="w-full md:w-1/3 flex flex-row md:flex-col overflow-x-auto md:overflow-visible z-10 gap-2 md:gap-0 pb-2 md:pb-0"
@@ -74,20 +77,34 @@ function Elite() {
                 className={`
                   group flex items-center gap-3 md:gap-4 p-3 md:p-4 text-left transition-all duration-300 
                   shrink-0 md:shrink min-w-[180px] md:min-w-0
-                  ${activeTab === event.id
-                    ? `bg-[rgba(71,71,71,1)] md:pr-12 md:mr-[-16px] shadow-[0_0_15px_rgba(6,182,212,0.3)]
-                       ${event.id === 1 ? "border-l-[5px] md:border-t-[5px] border-[rgba(48,48,48,1)]"
-                      : event.id === 4 ? "border-l-[5px] md:border-b-[5px] border-[rgba(48,48,48,1)]"
-                        : "border-l-[5px] border-[rgba(48,48,48,1)]"
-                    }`
-                    : "bg-[rgba(48,48,48,1)] hover:bg-[rgba(60,60,60,1)]"
+                  ${
+                    activeTab === event.id
+                      ? `bg-[rgba(71,71,71,1)] md:pr-12 md:mr-[-16px] shadow-[0_0_15px_rgba(6,182,212,0.3)]
+                       ${
+                         event.id === 1
+                           ? "border-l-[5px] md:border-t-[5px] border-[rgba(48,48,48,1)]"
+                           : event.id === 4
+                           ? "border-l-[5px] md:border-b-[5px] border-[rgba(48,48,48,1)]"
+                           : "border-l-[5px] border-[rgba(48,48,48,1)]"
+                       }`
+                      : "bg-[rgba(48,48,48,1)] hover:bg-[rgba(60,60,60,1)]"
                   }
                 `}
               >
                 <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded flex items-center justify-center shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-110">
-                  <img src={event.image} alt={event.title} className="w-full h-full object-cover opacity-80" />
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full h-full object-cover opacity-80"
+                  />
                 </div>
-                <span className={`font-minecraft text-xs sm:text-sm md:text-base transition-colors duration-300 ${activeTab === event.id ? "text-white" : "text-gray-400 group-hover:text-white"}`}>
+                <span
+                  className={`font-minecraft text-xs sm:text-sm md:text-base transition-colors duration-300 ${
+                    activeTab === event.id
+                      ? "text-white"
+                      : "text-gray-400 group-hover:text-white"
+                  }`}
+                >
                   {event.title}
                 </span>
               </motion.button>
@@ -125,7 +142,10 @@ function Elite() {
                 </p>
               </div>
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(215,153,40,0.6)" }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 20px rgba(215,153,40,0.6)",
+                }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => navigate(`/event/${activeEvent.slug}`)}
                 className="self-start lg:self-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#D79928] to-[#C57135] border-2 border-white text-black font-minecraft text-xs sm:text-sm hover:from-[#E5A935] hover:to-[#D17E42] transition-all shadow-lg shadow-orange-500/20 rounded-sm cursor-pointer"
