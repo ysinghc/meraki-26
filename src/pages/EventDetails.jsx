@@ -134,24 +134,6 @@ const EventDetails = () => {
                         </div>
                     </div>
                 </div>
-
-                { }
-                <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center border-t border-gray-600 pt-8">
-                    <div>
-                        <h3 className="font-pixel text-sm text-gray-300 mb-2">COORDINATORS</h3>
-                        <p className="font-terminal text-xs text-gray-400">Pranav garg</p>
-                        <p className="font-terminal text-xs text-gray-400">+91 XXXXXXXXXX</p>
-                    </div>
-                    <div className="flex flex-col items-center justify-center">
-                        <div className="text-4xl mb-2">🎮</div>
-                        <h2 className="font-minecraft text-3xl">MERAKI</h2>
-                    </div>
-                    <div>
-                        <h3 className="font-pixel text-sm text-gray-300 mb-2">QUICK LINKS</h3>
-                        <p className="font-terminal text-xs text-gray-400">Back to home</p>
-                        <p className="font-terminal text-xs text-gray-400">Registration Form</p>
-                    </div>
-                </div>
             </div>
         </div>
     );
