@@ -26,37 +26,38 @@ const About = () => {
                 <div className="flex flex-col gap-20 md:gap-24 max-w-5xl mx-auto w-full">
 
                     {/* About IIIT UNA Card */}
-                    <motion.div
-                        className="bg-black/80 backdrop-blur-sm border-4 border-gray-600 shadow-2xl p-8 md:p-10 lg:p-12 relative"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        style={{
-                            boxShadow: '0 0 0 2px rgba(0,0,0,0.8), 0 8px 24px rgba(0,0,0,0.6)',
-                        }}
-                    >
-                        {/* Character Image - Top Right */}
+                    <div className="aspect-video w-full">
                         <motion.div
-                            className="absolute -top-20 -right-4 md:-top-24 md:-right-8 w-32 h-40 md:w-40 md:h-52 z-10"
-                            initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-                            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
+                            className="bg-black/80 backdrop-blur-sm border-4 border-gray-600 shadow-2xl p-8 md:p-10 lg:p-12 relative h-full flex flex-col"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            style={{
+                                boxShadow: '0 0 0 2px rgba(0,0,0,0.8), 0 8px 24px rgba(0,0,0,0.6)',
+                            }}
                         >
-                            <img
-                                src={aboutImage1}
-                                alt="Minecraft Steve"
-                                className="w-full h-full object-contain"
-                                style={{
-                                    imageRendering: 'pixelated',
-                                    filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.8))'
-                                }}
-                            />
-                        </motion.div>
+                            {/* Character Image - Top Right */}
+                            <motion.div
+                                className="absolute -top-20 -right-4 md:-top-24 md:-right-8 w-32 h-40 md:w-40 md:h-52 z-10"
+                                initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
+                                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.3 }}
+                            >
+                                <img
+                                    src={aboutImage1}
+                                    alt="Minecraft Steve"
+                                    className="w-full h-full object-contain"
+                                    style={{
+                                        imageRendering: 'pixelated',
+                                        filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.8))'
+                                    }}
+                                />
+                            </motion.div>
 
                         <motion.h2
-                            className="font-terminal text-white tracking-wider uppercase text-center text-xl md:text-2xl lg:text-3xl mb-4"
+                            className="font-terminal text-white tracking-wider uppercase text-center text-2xl md:text-4xl lg:text-5xl mb-6"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -65,50 +66,52 @@ const About = () => {
                             ABOUT IIIT UNA
                         </motion.h2>
                         <motion.div
-                            className="mt-6"
+                            className="mt-auto flex-1 flex flex-col justify-center"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            <p className="text-white font-terminal leading-relaxed text-base md:text-lg lg:text-xl">
+                            <p className="text-white font-terminal leading-relaxed text-lg md:text-xl lg:text-2xl">
                                 {ABOUT_IIIT_UNA}
                             </p>
                         </motion.div>
-                    </motion.div>
+                        </motion.div>
+                    </div>
 
                     {/* About MERAKI Card */}
-                    <motion.div
-                        className="bg-black/80 backdrop-blur-sm border-4 border-gray-600 shadow-2xl p-8 md:p-10 lg:p-12 relative"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
-                        style={{
-                            boxShadow: '0 0 0 2px rgba(0,0,0,0.8), 0 8px 24px rgba(0,0,0,0.6)',
-                        }}
-                    >
-                        {/* Character Image - Top Left */}
+                    <div className="aspect-video w-full">
                         <motion.div
-                            className="absolute -top-20 -left-4 md:-top-24 md:-left-8 w-32 h-40 md:w-40 md:h-52 z-10"
-                            initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
-                            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
+                            className="bg-black/80 backdrop-blur-sm border-4 border-gray-600 shadow-2xl p-8 md:p-10 lg:p-12 relative h-full flex flex-col"
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            style={{
+                                boxShadow: '0 0 0 2px rgba(0,0,0,0.8), 0 8px 24px rgba(0,0,0,0.6)',
+                            }}
                         >
-                            <img
-                                src={aboutImage2}
-                                alt="Minecraft Creeper"
-                                className="w-full h-full object-contain"
-                                style={{
-                                    imageRendering: 'pixelated',
-                                    filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.8))'
-                                }}
-                            />
-                        </motion.div>
+                            {/* Character Image - Top Left */}
+                            <motion.div
+                                className="absolute -top-20 -left-4 md:-top-24 md:-left-8 w-32 h-40 md:w-40 md:h-52 z-10"
+                                initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
+                                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.3 }}
+                            >
+                                <img
+                                    src={aboutImage2}
+                                    alt="Minecraft Creeper"
+                                    className="w-full h-full object-contain"
+                                    style={{
+                                        imageRendering: 'pixelated',
+                                        filter: 'drop-shadow(4px 4px 8px rgba(0,0,0,0.8))'
+                                    }}
+                                />
+                            </motion.div>
 
                         <motion.h2
-                            className="font-terminal text-white tracking-wider uppercase text-center text-xl md:text-2xl lg:text-3xl mb-2"
+                            className="font-terminal text-white tracking-wider uppercase text-center text-2xl md:text-4xl lg:text-5xl mb-2"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -123,7 +126,7 @@ const About = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.3 }}
                             style={{
-                                fontSize: 'clamp(2rem, 6vw, 3.5rem)',
+                                fontSize: 'clamp(2.5rem, 8vw, 4rem)',
                                 background: 'linear-gradient(180deg, #e0e0e0 0%, #808080 50%, #606060 100%)',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent',
@@ -137,17 +140,18 @@ const About = () => {
                             MERAKI
                         </motion.h3>
                         <motion.div
-                            className="mt-6"
+                            className="mt-auto flex-1 flex flex-col justify-center"
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            <p className="text-white font-terminal leading-relaxed text-base md:text-lg lg:text-xl">
+                            <p className="text-white font-terminal leading-relaxed text-lg md:text-xl lg:text-2xl">
                                 {ABOUT_MERAKI}
                             </p>
                         </motion.div>
-                    </motion.div>
+                        </motion.div>
+                    </div>
 
                 </div>
             </div>
