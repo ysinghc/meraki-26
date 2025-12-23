@@ -210,7 +210,7 @@ const Schedule = () => {
                   </div>
                   <div className="flex justify-between items-center group">
                     <span className="text-gray-500 group-hover:text-gray-400 transition-colors">REALM</span>
-                    <span className="text-cyan-400">MERAKI 2.0</span>
+                    <span className="text-cyan-400">MERAKI</span>
                   </div>
                   <div className="flex justify-between items-center group">
                     <span className="text-gray-500 group-hover:text-gray-400 transition-colors">REGION</span>
