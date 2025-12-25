@@ -22,6 +22,8 @@ import ScrollProgressBar from "./ScrollProgressBar";
 import { scrollToSection } from "../utils/scrollToSection";
 import { heroSequence } from "../utils/motion";
 
+import ScrollModelContainer from "./ScrollModel"
+
 /**
  * Hero section with full-viewport landing and scroll-linked opacity.
  * 
@@ -208,6 +210,7 @@ const Hero = () => {
       <Faq />
 
       {/* Scroll progress indicator for desktop */}
+      <ScrollModelContainer/>
       <ScrollProgressBar />
     </>
   );
