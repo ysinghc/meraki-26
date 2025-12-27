@@ -21,7 +21,7 @@ import interviewBuddyLogo from '../assets/sponsors/interview_buddy.png';
 import unstopLogo from '../assets/sponsors/unstop_logo.svg';
 import aerostarLogo from '../assets/sponsors/aerostar.png';
 import devfolioLogo from '../assets/sponsors/devfolio_logo.png';
-import whosNextLogo from '../assets/whosNext.png';
+import whosNextLogo from '../assets/sponsors/whosnext.png';
 
 /**
  * Partner data array.
@@ -149,11 +149,11 @@ const PosterFrame = ({ partner, index }) => {
       />
 
       {/* Partner Details Plaque */}
-      <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 text-center w-48 z-20">
-        <p className="font-terminal text-xs sm:text-sm text-gray-300 mt-1">
+      <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 text-center w-64 z-20">
+        <p className="font-terminal text-lg sm:text-2xl text-gray-300 mt-1">
           {partner.firm}
         </p>
-        <p className="font-terminal text-[10px] sm:text-xs text-cyan-400">
+        <p className="font-terminal text-sm sm:text-lg text-cyan-400">
           {partner.designation}
         </p>
       </div>
