@@ -8,7 +8,7 @@ import React, { useState, useRef } from "react";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { useParams } from "react-router-dom";
 import eventDetailBg from "../assets/event_detail.webp";
-import minecraftSignComingSoon from "../assets/minecraft_sign_coming_soon.png";
+import minecraftSignComingSoon from "../assets/minecraft_sign_coming_soon.webp";
 import { eventDetailsData, events } from "../constants";
 
 /**

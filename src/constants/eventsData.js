@@ -9,12 +9,12 @@
  */
 
 import minecraftimg from "../assets/minecraft_dungeons_placeholder.webp";
-import skyCircuitImg from "../assets/skycircuit.png";
-import roboDriveImg from "../assets/itsRoboDrive.png";
-import hackTheThroneImg from "../assets/hack_the_throne.png";
-import arenaXImg from "../assets/Esports.jpeg";
-import cairLogo from "../assets/sponsors/iitlogo.png";
-import aerostarLogo from "../assets/sponsors/aerostar.png";
+import skyCircuitImg from "../assets/skycircuit.webp";
+import roboDriveImg from "../assets/itsRoboDrive.webp";
+import hackTheThroneImg from "../assets/hack_the_throne.webp";
+import arenaXImg from "../assets/Esports.webp";
+import cairLogo from "../assets/sponsors/iitlogo.webp";
+import aerostarLogo from "../assets/sponsors/aerostar.webp";
 
 /**
  * Elite events array for homepage tabs.

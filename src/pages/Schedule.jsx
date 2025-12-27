@@ -13,7 +13,7 @@ import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion"
 import { Link } from "react-router-dom";
 import dashboardBg from "../assets/dashboard.webp";
 import avatarImg from "../assets/avatar_pixel.webp";
-import minecraftSignComingSoon from "../assets/minecraft_sign_coming_soon.png";
+import minecraftSignComingSoon from "../assets/minecraft_sign_coming_soon.webp";
 import { scheduleData, showSchedule } from "../constants";
 
 /**

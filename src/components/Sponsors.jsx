@@ -17,11 +17,11 @@ import charArt from "../assets/sponsors_character_art.webp";
 import { appleSlideUp, appleScaleIn, sectionTransition } from "../utils/motion";
 
 import iiituLogo from '../assets/sponsors/iiitu_logo.webp';
-import interviewBuddyLogo from '../assets/sponsors/interview_buddy.png';
+import interviewBuddyLogo from '../assets/sponsors/interview_buddy.webp';
 import unstopLogo from '../assets/sponsors/unstop_logo.svg';
-import aerostarLogo from '../assets/sponsors/aerostar.png';
-import devfolioLogo from '../assets/sponsors/devfolio_logo.png';
-import whosNextLogo from '../assets/sponsors/whosnext.png';
+import aerostarLogo from '../assets/sponsors/aerostar.webp';
+import devfolioLogo from '../assets/sponsors/devfolio_logo.webp';
+import whosNextLogo from '../assets/sponsors/whosnext.webp';
 
 /**
  * Partner data array.
