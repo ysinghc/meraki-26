@@ -68,7 +68,7 @@ const Schedule = () => {
    * @param {string} props.className - Additional Tailwind classes
    */
   const SkeletonBlock = ({ className }) => (
-    <div className={`bg-gray-700/50 ${className}`} />
+    <div className={`bg-gray-700/50 animate-pulse ${className}`} />
   );
 
   /**
@@ -142,16 +142,16 @@ const Schedule = () => {
           <div className="relative min-h-[50vh]">
             {/* Floating "Coming Soon" Badge */}
             <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none select-none">
-              <div className="relative w-[300px] sm:w-[400px] aspect-[4/3] flex items-center justify-center transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+              <div className="relative w-[400px] sm:w-[500px] md:w-[600px] aspect-[4/3] flex items-center justify-center transform -rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img src={minecraftSignComingSoon} alt="Coming Soon" className="absolute inset-0 w-full h-full object-contain drop-shadow-2xl opacity-100" />
               </div>
             </div>
 
             {/* Skeleton Background Content */}
             <motion.div
-              className="flex flex-col lg:grid lg:grid-cols-4 gap-6 lg:gap-8 opacity-70 pointer-events-none select-none filter blur-[1px]"
+              className="flex flex-col lg:grid lg:grid-cols-4 gap-6 lg:gap-8 opacity-30 pointer-events-none select-none filter blur-[1px]"
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0.7 }}
+              animate={{ opacity: 0.3 }}
               transition={{ duration: 0.8 }}
             >
               {/* Skeleton Sidebar */}
