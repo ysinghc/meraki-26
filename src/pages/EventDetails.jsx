@@ -160,7 +160,7 @@ const EventDetails = () => {
               {/* Info */}
               <div className="space-y-4 sm:space-y-6 order-2">
                 {eventInfo?.isElite && <div className="inline-block bg-blue-600/20 border-2 border-blue-500 px-4 py-2 mt-2"><span className="font-pixel text-blue-400 text-sm sm:text-base tracking-wider flex items-center gap-2"><span className="animate-pulse">★</span> FLAGSHIP EVENT</span></div>}
-                <div className="flex items-center gap-2 sm:gap-3"><span className="text-2xl sm:text-3xl md:text-4xl">💰</span><span className="font-pixel text-xl sm:text-2xl md:text-3xl text-yellow-400">{eventData.price}</span></div>
+                {eventData.price && <div className="flex items-center gap-2 sm:gap-3"><span className="text-2xl sm:text-3xl md:text-4xl">💰</span><span className="font-pixel text-xl sm:text-2xl md:text-3xl text-yellow-400">{eventData.price}</span></div>}
                 <div className="flex flex-wrap gap-2 sm:gap-3">{eventData.tags.map((tag, index) => <span key={index} className="bg-gray-800 border border-gray-600 text-white font-terminal text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2">{tag}</span>)}</div>
                 <motion.a href={eventData.registerLink || "#"} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="inline-block w-full sm:w-auto bg-gradient-to-r from-orange-600 to-orange-500 text-white font-pixel text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 border-2 border-orange-800 hover:from-orange-500 hover:to-orange-400 transition-all min-h-[48px] text-center">{eventData.buttonText || 'REGISTER NOW!'}</motion.a>
               </div>
