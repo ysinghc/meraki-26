@@ -32,7 +32,7 @@ import ethindiaLogo from '../assets/ethindia.svg';
  * @type {Array<{name: string, firm: string, designation: string, logo: string, url?: string}>}
  */
 const partners = [
-  { name: "mioArtai", firm: "MioartAI", designation: "Theme Partner", logo: mioartaiLogo, url: "https://www.instagram.com/mioartai/" },
+  { name: "mioArtAI", firm: "mioArtAI", designation: "Theme Partner", logo: mioartaiLogo, url: "https://www.instagram.com/mioartai/" },
   { name: "Dopamine Store", firm: "Dopamine Store", designation: "Merchandise and Lifestyle Partner", logo: dopamineStoreLogo, url: "https://thedopaminestore.in" },
   { name: "ETHindia", firm: "ETHindia", designation: "Silver Sponsor", logo: ethindiaLogo, url: "https://www.instagram.com/ethindiaco/" },
   { name: "Devfolio", firm: "Devfolio", designation: "Platform Partner", logo: devfolioLogo, url: "https://devfolio.co" },
